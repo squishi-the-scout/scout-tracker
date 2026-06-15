@@ -9,20 +9,24 @@
 <body>
     <div class="container">
         <h1>🌸 Hope for Women Scouts</h1>
-        <p class="subtitle">Progress Tracker</p>
+        <p class="subtitle">Login</p>
 
-        <div class="scout-list">
-            <div class="scout-card">
-                <h2>Aisha</h2>
-                <p>Membership Badge · 0/12 completed</p>
-                <a href="scout-profile.html?name=Aisha" class="button">View Progress</a>
-            </div>
+        <div id="login-section">
+            <select id="role-select">
+                <option value="scout">Scout</option>
+                <option value="leader">Leader</option>
+            </select>
+            <input type="text" id="username" placeholder="Username" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 8px; border: 1px solid #ddd;">
+            <input type="password" id="password" placeholder="Password" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 8px; border: 1px solid #ddd;">
+            <button id="login-btn" class="button">Login</button>
+            <p id="error-message" style="color: red; margin-top: 10px;"></p>
         </div>
 
-        <div class="add-scout">
-            <p style="color: #666; font-size: 14px;">More scouts coming soon — add them to the code</p>
+        <div id="dashboard" style="display: none;">
+            <!-- Dashboard will load here -->
         </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="auth.js"></script>
 </body>
 </html>
